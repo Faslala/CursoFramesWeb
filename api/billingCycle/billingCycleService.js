@@ -1,4 +1,3 @@
-//const { locals } = require('../../config/server')
 const _ = require('lodash')
 const BillingCycle = require('./billingCycle')
 
@@ -8,10 +7,10 @@ BillingCycle.updateOptions({ new: true, runValidators: true })
 BillingCycle.after('post', sendErrorsOrNext).after('put', sendErrorsOrNext)
 
 function sendErrorsOrNext(req, res, next) {
-    const bundle = res;locals.bundle
+    const bundle = res.locals.bundle
 
     if (bundle.errors) {
-        var erros = parseErrors(bundle.errors)
+        const erros = parseErrors(bundle.errors)
         res.status(500).json({ errors })
     } else {
         next()
