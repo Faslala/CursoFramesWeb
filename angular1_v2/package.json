@@ -1,6 +1,5 @@
-
 {
-  "name": "angular1",
+  "name": "angular1_v2",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -10,7 +9,7 @@
     "production": "gulp --production"
   },
   "keywords": [],
-  "author": "Faslala Assis",
+  "author": "Faslala",
   "license": "ISC",
   "devDependencies": {
     "admin-lte": "2.3.11",
