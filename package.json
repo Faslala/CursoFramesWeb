@@ -7,7 +7,7 @@
     "dev": "nodemon",
     "production": "pm2 start loader.js --name backend"
   },
-  "author": "Paulo Victor Vasconcelos",
+  "author": "Faslala Assis",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",

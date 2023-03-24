@@ -15,4 +15,8 @@ server.listen(port, function(){
   console.log(`BACKEND is running on port ${port}.`)
 })
 
+// server.use( function (req, res){
+//   res.send("Este é um teste para verificar se o browser está funcionando na porta 3003")
+// })
+
 module.exports = server

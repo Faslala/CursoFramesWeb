@@ -1,16 +1,17 @@
 const express = require('express')
 
+module.exports = function(server){
 
-module.exports = function(server) {
-    // API Routes
-    const router = express.Router()
-    server.use('/api', router)
+  const router = express.Router()
+  server.use('/api', router)
 
-    //rotas API
-    const billingCycleService = require('../api/billingCycle/billingCycleService')
-    billingCycleService.register(router, '/billingCycles')
+//   pq se eu colocar api no lugar de teste nao funciona?
+//   router.route('/test').get(function(req, res) { res.send('testando o roteamento /api/teste')})
 
-    const billingSummaryService = require('../api/billingSummary/billingSummaryService')
-    router.route('/billingSummary')//.get(billingCycleService.getSummary)
+  // rotas da API
+  const billingCycleService = require('../api/billingCycle/billingCycleService')
+  billingCycleService.register(router, '/billingCycles')
 
+  const billingSummaryService = require('../api/billingSummary/billingSummaryService')
+  router.route('/billingSummary').get(billingSummaryService.getSummary)
 }
